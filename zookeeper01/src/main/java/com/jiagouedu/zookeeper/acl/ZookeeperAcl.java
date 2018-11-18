@@ -1,4 +1,5 @@
-package com.jiagouedu.zookeeper.acl;/* ━━━━━━如来保佑━━━━━━
+package com.jiagouedu.zookeeper.acl;
+/* ━━━━━━如来保佑━━━━━━
  * 　　　┏┓　　　┏┓
  * 　　┏┛┻━━━┛┻┓
  * 　　┃　　　━　　　┃
@@ -14,13 +15,15 @@ package com.jiagouedu.zookeeper.acl;/* ━━━━━━如来保佑━━━�
    zookeeper原生操作
  */
 
-import org.apache.zookeeper.*;
+import org.apache.zookeeper.CreateMode;
+import org.apache.zookeeper.KeeperException;
+import org.apache.zookeeper.ZKUtil;
+import org.apache.zookeeper.ZooDefs;
+import org.apache.zookeeper.ZooKeeper;
 import org.apache.zookeeper.data.Stat;
 
-import java.io.IOException;
-
 public class ZookeeperAcl {
-   private String connectString="192.168.0.31:2181,192.168.0.32:2181,192.168.0.33:2181";
+	 private String connectString="192.168.137.20:2181,192.168.137.21:2181";
    private ZooKeeper zookeeper;
    /** 认证类型 */
    final static String scheme = "digest";
